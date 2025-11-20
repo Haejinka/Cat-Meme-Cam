@@ -1,0 +1,7 @@
+{
+  "name": "Freaky Cam",
+  "description": "Step into the millennium's most advanced digital photobooth.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

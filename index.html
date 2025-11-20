@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberSnap 2000</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'pixel': ['"Press Start 2P"', 'cursive'],
+              'terminal': ['"VT323"', 'monospace'],
+              'comic': ['"Comic Neue"', 'cursive'],
+            },
+            colors: {
+              'y2k-pink': '#ff00ff',
+              'y2k-lime': '#ccff00',
+              'y2k-blue': '#00ffff',
+              'y2k-purple': '#9d00ff',
+            },
+            animation: {
+              'pulse-fast': 'pulse 0.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 3s ease-in-out infinite',
+              'spin-slow': 'spin 10s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #000;
+        overflow-x: hidden;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #2d004d; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ff00ff; 
+        border: 2px solid #ccff00;
+      }
+
+      /* Background Patterns */
+      .pattern-grid {
+        background-image: 
+          linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 0, 255, 0.1) 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+
+      .pattern-dots {
+        background-image: radial-gradient(rgba(204, 255, 0, 0.2) 2px, transparent 2px);
+        background-size: 20px 20px;
+      }
+
+      .pattern-checker {
+        background-image: 
+          conic-gradient(from 0deg, rgba(255, 0, 255, 0.1) 0deg 90deg, transparent 90deg 180deg, rgba(255, 0, 255, 0.1) 180deg 270deg, transparent 270deg);
+        background-size: 40px 40px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@mediapipe/tasks-vision": "https://esm.run/@mediapipe/tasks-vision@0.10.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
